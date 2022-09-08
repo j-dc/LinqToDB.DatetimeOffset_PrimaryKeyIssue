@@ -131,9 +131,10 @@ public class MyTimedTable {
 
 [Table(Name = "DefaultTimedTable")]
 public class DefaultTimedTable {
-	public DefaultTimedTable(string key, DateTimeOffset timestamp) {
+	public DefaultTimedTable(string key, DateTimeOffset timestamp, string? name = null) {
 		Key = key;
 		Timestamp = timestamp;
+		Name = name;
 	}
 
 	[Column("Key"), PrimaryKey, NotNull] public string Key { get; set; }
